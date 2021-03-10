@@ -1,2 +1,2 @@
 install:
-mvn install:install-file -Dfile=sdk-barcode.aar -Djavadoc=sdk-barcode-javadoc.jar -DgroupId=com.vuzix -DartifactId=sdk-barcode -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true
+mvn install:install-file -Dfile=sdk-barcode.jar -Djavadoc=sdk-barcode-javadoc.jar -DgroupId=com.vuzix -DartifactId=sdk-barcode -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true
