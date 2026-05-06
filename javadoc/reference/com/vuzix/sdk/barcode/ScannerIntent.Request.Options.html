@@ -50,7 +50,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ScannerFragment.Listener | Android Developers
+  <title>ScannerIntent.Request.Options | Android Developers
 </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
@@ -105,7 +105,7 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 
 <div itemscope itemtype="http://developers.google.com/ReferenceObject">
 <!-- This DIV closes at the end of the BODY -->
-  <meta itemprop="name" content="com.vuzix.sdk.barcode.ScannerFragment.Listener" />
+  <meta itemprop="name" content="com.vuzix.sdk.barcode.ScannerIntent.Request.Options" />
   
 
   
@@ -236,31 +236,18 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
         <ul data-reference-resources>
           
           
-    <li><h2 class="hide-from-toc">Interfaces</h2>
-      <ul>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2.html">Scanner2</a></li>
-          <li class="selected"><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.Listener.html">ScannerFragment.Listener</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.Listener2.html">ScannerFragment.Listener2</a></li>
-      </ul>
-    </li>
           
     <li><h2 class="hide-from-toc">Classes</h2>
       <ul>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Location.html">Location</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner.html">Scanner</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2Constants.html">Scanner2Constants</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2Factory.html">Scanner2Factory</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.html">ScannerFragment</a></li>
           <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html">ScannerIntent</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanningRect.html">ScanningRect</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult.html">ScanResult</a></li>
+          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.html">ScannerIntent.Request</a></li>
+          <li class="selected"><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.Options.html">ScannerIntent.Request.Options</a></li>
           <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult2.html">ScanResult2</a></li>
       </ul>
     </li>
           
     <li><h2 class="hide-from-toc">Enums</h2>
       <ul>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType.html">BarcodeType</a></li>
           <li><a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType2.html">BarcodeType2</a></li>
       </ul>
     </li>
@@ -455,18 +442,26 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 
 <!-- ======== START OF CLASS DATA ======== -->
 
-<h1 class="api-title">ScannerFragment.Listener</h1>
+<h1 class="api-title">ScannerIntent.Request.Options</h1>
 <p>
 <code class="api-signature">
   public
   static
+  final
   
-  
-  interface
-  ScannerFragment.Listener
+  class
+  ScannerIntent.Request.Options
 </code>
 <br>
 
+
+<code class="api-signature">
+  
+    extends Object
+  
+  
+  
+</code>
 
 <code class="api-signature">
   
@@ -479,7 +474,16 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 
   <tr>
     
-    <td colspan="1" class="jd-inheritance-class-cell">com.vuzix.sdk.barcode.ScannerFragment.Listener
+    <td colspan="2" class="jd-inheritance-class-cell">java.lang.Object
+    </td>
+  </tr>
+  
+
+  <tr>
+    
+      <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+    
+    <td colspan="1" class="jd-inheritance-class-cell">com.vuzix.sdk.barcode.ScannerIntent.Request.Options
     </td>
   </tr>
   
@@ -492,8 +496,7 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 <br><hr>
 
 
-  <p>Interface for those who want to be notified when a barcode is identified.
-</p>
+  <p>Options that can customize the behavior of the scanner</p>
 
 
 
@@ -522,68 +525,99 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 
 
 
-
-
-
-
-
-
-
-
-
-<!-- ========== METHOD SUMMARY =========== -->
-<table id="pubmethods" class="responsive methods">
-<tr><th colspan="2"><h3>Public methods</h3></th></tr>
+<!-- =========== FIELD SUMMARY =========== -->
+<table id="lfields" class="responsive properties">
+<tr><th colspan="2"><h3>Fields</h3></th></tr>
 
 
 
   <tr  >
-  
-  
     <td><code>
-        abstract
-        
-        
-        
-        
-        void</code>
-    </td>
-  
+    public
+    
+    
+    String</code></td>
     <td width="100%">
-      <code>
-      <a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.Listener.html#onError()">onError</a>()
-      </code>
+      <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.Options.html#cameraId">cameraId</a></code>
+      <p>Identify the camera to use.
       
-        <p>An irrecoverable error has occurred within the ScannerFragment.
-        
     
 </p>
-      
     </td>
   </tr>
   
 
   <tr  >
-  
-  
     <td><code>
-        abstract
-        
-        
-        
-        
-        void</code>
+    public
+    
+    
+    boolean</code></td>
+    <td width="100%">
+      <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.Options.html#enablePreview">enablePreview</a></code>
+      <p>True to enable the preview.
+      
+    
+</p>
     </td>
+  </tr>
+  
+
+  <tr  >
+    <td><code>
+    public
+    
+    
+    boolean</code></td>
+    <td width="100%">
+      <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.Options.html#handleInternally">handleInternally</a></code>
+      <p>Opens the system scanner and handle the result internally.
+      
+    
+</p>
+    </td>
+  </tr>
+  
+
+  <tr  >
+    <td><code>
+    public
+    
+    
+    boolean</code></td>
+    <td width="100%">
+      <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.Options.html#remainOpenAfterScan">remainOpenAfterScan</a></code>
+      <p>If <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.Options.html#handleInternally">handleInternally</a></code> is set, remains open for multiple scans
+ instead of returning after a single scan.
+      
+    
+</p>
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="responsive constructors">
+<tr><th colspan="2"><h3>Public constructors</h3></th></tr>
+
+
+
+  <tr  >
+  
   
     <td width="100%">
       <code>
-      <a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.Listener.html#onScanResult(android.graphics.Bitmap,%20com.vuzix.sdk.barcode.ScanResult[])">onScanResult</a>(Bitmap bitmap, <a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult.html">ScanResult[]</a> results)
+      <a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.Options.html#Options()">Options</a>()
       </code>
-      
-        <p>One or more barcodes have been identified.
-        
-    
-</p>
       
     </td>
   </tr>
@@ -591,6 +625,10 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 
 
 </table>
+
+
+
+
 
 
 
@@ -611,7 +649,122 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 <!-- Fields -->
 
 
+<!-- ========= FIELD DETAIL ======== -->
+<h2 class="api-section">Fields</h2>
+
+
+<div  >
+    <h3 class="api-name" id="cameraId">cameraId</h3>
+    <div class="api-level">
+      
+  
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+public String cameraId</pre>
+    
+    
+
+    
+  <p>Identify the camera to use. This is useful when external cameras are present.</p></p>
+
+    
+</div>
+
+<div  >
+    <h3 class="api-name" id="enablePreview">enablePreview</h3>
+    <div class="api-level">
+      
+  
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+public boolean enablePreview</pre>
+    
+    
+
+    
+  <p>True to enable the preview. This is useful on transparent displays to remove the preview.</p></p>
+
+    
+</div>
+
+<div  >
+    <h3 class="api-name" id="handleInternally">handleInternally</h3>
+    <div class="api-level">
+      
+  
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+public boolean handleInternally</pre>
+    
+    
+
+    
+  <p>Opens the system scanner and handle the result internally. This is useful for
+ creating a simple UI to scan a Wi-Fi network QR code.</p></p>
+
+    
+</div>
+
+<div  >
+    <h3 class="api-name" id="remainOpenAfterScan">remainOpenAfterScan</h3>
+    <div class="api-level">
+      
+  
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+public boolean remainOpenAfterScan</pre>
+    
+    
+
+    
+  <p>If <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.Options.html#handleInternally">handleInternally</a></code> is set, remains open for multiple scans
+ instead of returning after a single scan.</p></p>
+
+    
+</div>
+
+
+
+
 <!-- Public ctors -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2 class="api-section">Public constructors</h2>
+
+
+<div >
+    <h3 class="api-name" id="Options()">Options</h3>
+    <div class="api-level">
+      <div>
+  </div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+public Options ()</pre>
+    
+    
+
+    
+  <p></p></p>
+
+</div>
+
+
 
 
 
@@ -622,70 +775,6 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 
 <!-- ========= METHOD DETAIL ======== -->
 <!-- Public methdos -->
-
-<h2 class="api-section">Public methods</h2>
-
-
-<div >
-    <h3 class="api-name" id="onError()">onError</h3>
-    <div class="api-level">
-      <div>
-  </div>
-      
-  
-
-    </div>
-<pre class="api-signature no-pretty-print">
-public abstract void onError ()</pre>
-    
-    
-
-    
-  <p>An irrecoverable error has occurred within the ScannerFragment. The fragment should be
- removed from your activity upon this method being invoked. This method will be invoked
- on the main application thread.
-</p></p>
-
-</div>
-
-<div >
-    <h3 class="api-name" id="onScanResult(android.graphics.Bitmap,%20com.vuzix.sdk.barcode.ScanResult[])">onScanResult</h3>
-    <div class="api-level">
-      <div>
-  </div>
-      
-  
-
-    </div>
-<pre class="api-signature no-pretty-print">
-public abstract void onScanResult (Bitmap bitmap, 
-                <a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult.html">ScanResult[]</a> results)</pre>
-    
-    
-
-    
-  <p>One or more barcodes have been identified. Note that this method will be called
- repeatedly as a barcode remains in the scanning rect. If you only want to be notified
- once, you should unregister your listener during this method call. This method will be
- invoked on the main application thread.</p></p>
-    <table class="responsive">
-    <tr><th colspan=2>Parameters</th></tr>
-      <tr>
-        <td><code>bitmap</code></td>
-        <td width="100%">
-          <code>Bitmap</code>: the bitmap in which barcodes were found</p></td>
-      </tr>
-      <tr>
-        <td><code>results</code></td>
-        <td width="100%">
-          <code>ScanResult</code>: an array of ScanResult
-</p></td>
-      </tr>
-    </table>
-
-</div>
-
-
 
 
 

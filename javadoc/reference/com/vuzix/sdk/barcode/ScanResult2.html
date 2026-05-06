@@ -236,31 +236,18 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
         <ul data-reference-resources>
           
           
-    <li><h2 class="hide-from-toc">Interfaces</h2>
-      <ul>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2.html">Scanner2</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.Listener.html">ScannerFragment.Listener</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.Listener2.html">ScannerFragment.Listener2</a></li>
-      </ul>
-    </li>
           
     <li><h2 class="hide-from-toc">Classes</h2>
       <ul>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Location.html">Location</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner.html">Scanner</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2Constants.html">Scanner2Constants</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2Factory.html">Scanner2Factory</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.html">ScannerFragment</a></li>
           <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html">ScannerIntent</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanningRect.html">ScanningRect</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult.html">ScanResult</a></li>
+          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.html">ScannerIntent.Request</a></li>
+          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.Options.html">ScannerIntent.Request.Options</a></li>
           <li class="selected"><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult2.html">ScanResult2</a></li>
       </ul>
     </li>
           
     <li><h2 class="hide-from-toc">Enums</h2>
       <ul>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType.html">BarcodeType</a></li>
           <li><a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType2.html">BarcodeType2</a></li>
       </ul>
     </li>
@@ -514,8 +501,7 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 <br><hr>
 
 
-  <p>Represents a single barcode located within an image.
-</p>
+  <p>Represents a single barcode located within an image.</p>
 
 
 
@@ -589,6 +575,11 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
       <a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult2.html#ScanResult2(java.lang.String,%20byte[],%20android.graphics.Point[],%20com.vuzix.sdk.barcode.BarcodeType2)">ScanResult2</a>(String text, byte[] rawBytes, Point[] resultPoints, <a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType2.html">BarcodeType2</a> format)
       </code>
       
+        <p>Constructs a result from the data found within the image frame
+        
+    
+</p>
+      
     </td>
   </tr>
   
@@ -600,6 +591,11 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
       <code>
       <a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult2.html#ScanResult2(java.lang.String,%20byte[],%20android.graphics.Point[],%20com.vuzix.sdk.barcode.BarcodeType2,%20long)">ScanResult2</a>(String text, byte[] rawBytes, Point[] resultPoints, <a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType2.html">BarcodeType2</a> format, long timestamp)
       </code>
+      
+        <p>Constructs a result from the data found within the image frame
+        
+    
+</p>
       
     </td>
   </tr>
@@ -635,6 +631,11 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
       <code>
       <a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult2.html#addResultPoints(android.graphics.Point[])">addResultPoints</a>(Point[] newPoints)
       </code>
+      
+        <p>Adds details of the barcode location points to the results
+        
+    
+</p>
       
     </td>
   </tr>
@@ -762,6 +763,11 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
       <a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult2.html#getTimestamp()">getTimestamp</a>()
       </code>
       
+        <p>Get the timestamp when the barcode was detected
+        
+    
+</p>
+      
     </td>
   </tr>
   
@@ -882,28 +888,29 @@ public ScanResult2 (String text,
     
 
     
-  <p></p></p>
+  <p>Constructs a result from the data found within the image frame</p></p>
+    
     <table class="responsive">
     <tr><th colspan=2>Parameters</th></tr>
       <tr>
         <td><code>text</code></td>
         <td width="100%">
-          <code>String</code> <!-- no parameter comment --></p></td>
+          <code>String</code>: String representation of the scanned barcode data</p></td>
       </tr>
       <tr>
         <td><code>rawBytes</code></td>
         <td width="100%">
-          <code>byte</code> <!-- no parameter comment --></p></td>
+          <code>byte</code>: byte[] representation of the scanned barcode data</p></td>
       </tr>
       <tr>
         <td><code>resultPoints</code></td>
         <td width="100%">
-          <code>Point</code> <!-- no parameter comment --></p></td>
+          <code>Point</code>: Point[] data for the corners of the barcode within the image frame</p></td>
       </tr>
       <tr>
         <td><code>format</code></td>
         <td width="100%">
-          <code>BarcodeType2</code> <!-- no parameter comment --></p></td>
+          <code>BarcodeType2</code>: BarcodeType2 format of the scanned barcoded data</p></td>
       </tr>
     </table>
 
@@ -928,33 +935,34 @@ public ScanResult2 (String text,
     
 
     
-  <p></p></p>
+  <p>Constructs a result from the data found within the image frame</p></p>
+    
     <table class="responsive">
     <tr><th colspan=2>Parameters</th></tr>
       <tr>
         <td><code>text</code></td>
         <td width="100%">
-          <code>String</code> <!-- no parameter comment --></p></td>
+          <code>String</code>: String representation of the scanned barcode data</p></td>
       </tr>
       <tr>
         <td><code>rawBytes</code></td>
         <td width="100%">
-          <code>byte</code> <!-- no parameter comment --></p></td>
+          <code>byte</code>: byte[] representation of the scanned barcode data</p></td>
       </tr>
       <tr>
         <td><code>resultPoints</code></td>
         <td width="100%">
-          <code>Point</code> <!-- no parameter comment --></p></td>
+          <code>Point</code>: Point[] data for the corners of the barcode within the image frame</p></td>
       </tr>
       <tr>
         <td><code>format</code></td>
         <td width="100%">
-          <code>BarcodeType2</code> <!-- no parameter comment --></p></td>
+          <code>BarcodeType2</code>: BarcodeType2 format of the scanned barcoded data</p></td>
       </tr>
       <tr>
         <td><code>timestamp</code></td>
         <td width="100%">
-          <code>long</code> <!-- no parameter comment --></p></td>
+          <code>long</code>: Timestamp of when the scan was detected</p></td>
       </tr>
     </table>
 
@@ -990,13 +998,14 @@ public void addResultPoints (Point[] newPoints)</pre>
     
 
     
-  <p></p></p>
+  <p>Adds details of the barcode location points to the results</p></p>
+    
     <table class="responsive">
     <tr><th colspan=2>Parameters</th></tr>
       <tr>
         <td><code>newPoints</code></td>
         <td width="100%">
-          <code>Point</code> <!-- no parameter comment --></p></td>
+          <code>Point</code>: Point[] information of corners</p></td>
       </tr>
     </table>
 
@@ -1044,12 +1053,12 @@ public <a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType2.html
 
     
   <p></p></p>
+    
     <table class="responsive">
       <tr><th colspan=2>Returns</th></tr>
       <tr>
         <td><code><a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType2.html">BarcodeType2</a></code></td>
-        <td width="100%"><code><a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType2.html">BarcodeType2</a></code> representing the format of the barcode that was decoded
-</p></td>
+        <td width="100%"><code><a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType2.html">BarcodeType2</a></code> representing the format of the barcode that was decoded</p></td>
       </tr>
     </table>
 
@@ -1071,12 +1080,12 @@ public byte[] getRawBytes ()</pre>
 
     
   <p></p></p>
+    
     <table class="responsive">
       <tr><th colspan=2>Returns</th></tr>
       <tr>
         <td><code>byte[]</code></td>
-        <td width="100%">raw bytes encoded by the barcode, if applicable, otherwise <code>null</code>
-</p></td>
+        <td width="100%">raw bytes encoded by the barcode, if applicable, otherwise <code>null</code></p></td>
       </tr>
     </table>
 
@@ -1098,14 +1107,14 @@ public Point[] getResultPoints ()</pre>
 
     
   <p></p></p>
+    
     <table class="responsive">
       <tr><th colspan=2>Returns</th></tr>
       <tr>
         <td><code>Point[]</code></td>
-        <td width="100%">points related to the barcode in the image. These are typically points
-         identifying finder patterns or the corners of the barcode. The exact meaning is
-         specific to the type of barcode that was decoded.
-</p></td>
+        <td width="100%">Point[] array related to the barcode in the image. These are typically points identifying
+         finder patterns or the corners of the barcode. The exact meaning is specific to the type
+         of barcode that was decoded.</p></td>
       </tr>
     </table>
 
@@ -1127,12 +1136,12 @@ public String getText ()</pre>
 
     
   <p></p></p>
+    
     <table class="responsive">
       <tr><th colspan=2>Returns</th></tr>
       <tr>
         <td><code>String</code></td>
-        <td width="100%">raw text encoded by the barcode
-</p></td>
+        <td width="100%">text encoded by the barcode</p></td>
       </tr>
     </table>
 
@@ -1153,12 +1162,13 @@ public long getTimestamp ()</pre>
     
 
     
-  <p></p></p>
+  <p>Get the timestamp when the barcode was detected</p></p>
+    
     <table class="responsive">
       <tr><th colspan=2>Returns</th></tr>
       <tr>
         <td><code>long</code></td>
-        <td width="100%"><!-- no returns description in source --></p></td>
+        <td width="100%">long epoch timestamp</p></td>
       </tr>
     </table>
 

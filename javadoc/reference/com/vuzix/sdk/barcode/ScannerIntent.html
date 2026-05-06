@@ -236,31 +236,18 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
         <ul data-reference-resources>
           
           
-    <li><h2 class="hide-from-toc">Interfaces</h2>
-      <ul>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2.html">Scanner2</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.Listener.html">ScannerFragment.Listener</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.Listener2.html">ScannerFragment.Listener2</a></li>
-      </ul>
-    </li>
           
     <li><h2 class="hide-from-toc">Classes</h2>
       <ul>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Location.html">Location</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner.html">Scanner</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2Constants.html">Scanner2Constants</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2Factory.html">Scanner2Factory</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.html">ScannerFragment</a></li>
           <li class="selected"><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html">ScannerIntent</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanningRect.html">ScanningRect</a></li>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult.html">ScanResult</a></li>
+          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.html">ScannerIntent.Request</a></li>
+          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.Options.html">ScannerIntent.Request.Options</a></li>
           <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult2.html">ScanResult2</a></li>
       </ul>
     </li>
           
     <li><h2 class="hide-from-toc">Enums</h2>
       <ul>
-          <li><a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType.html">BarcodeType</a></li>
           <li><a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType2.html">BarcodeType2</a></li>
       </ul>
     </li>
@@ -509,8 +496,13 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 <br><hr>
 
 
-  <p>ScannerIntent contains constants useful for performing barcode scanning via an intent.
-</p>
+  <p><p>Defines the constants required for performing barcode scanning via an intent, and
+ defines some classes and methods to simplify the scanning request process.</p>
+
+ <p>Basic usage:</p>
+ <pre>
+    startActivityForResult(new ScannerIntent.Request(), YOUR_UNIQUE_ID);
+ </pre></p>
 
 
 
@@ -521,6 +513,32 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 
 
 <h2 class="api-section">Summary</h2>
+
+
+
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<table id="nestedclasses" class="responsive">
+<tr><th colspan="2"><h3>Nested classes</h3></th></tr>
+
+
+  
+    <tr  >
+      <td class="jd-typecol"><code>
+        
+        
+        
+        
+        class</code></td>
+      <td class="jd-descrcol" width="100%">
+        <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.html">ScannerIntent.Request</a></code>
+        <p><p>Creates an Intent used to make a request to the embedded Vuzix engine.&nbsp;
+        
+    
+</p>
+      </td>
+    </tr>
+    
+    
 
 
 
@@ -555,8 +573,8 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
     <tr  >
         <td><code>String</code></td>
         <td width="100%">
-          <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#EXTRA_BARCODE2_TYPES">EXTRA_BARCODE2_TYPES</a></code>
-          <p>A string array extra for specifying barcode types to scan for.
+          <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#EXTRA_BARCODE2_HANDLE_BARCODE">EXTRA_BARCODE2_HANDLE_BARCODE</a></code>
+          <p>A Boolean extra to specify barcode app should handle the barcode for you.
           
     
 </p>
@@ -567,11 +585,20 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
     <tr  >
         <td><code>String</code></td>
         <td width="100%">
-          <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#EXTRA_BARCODE_TYPES">EXTRA_BARCODE_TYPES</a></code>
-          <p><em>
-      This constant is deprecated.
-    As of Scanner 2
-</em>
+          <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#EXTRA_BARCODE2_STAY_OPEN_AFTER_HANDLING">EXTRA_BARCODE2_STAY_OPEN_AFTER_HANDLING</a></code>
+          <p>A Boolean extra to specify barcode app should expect multiple scans to handle internally.
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr  >
+        <td><code>String</code></td>
+        <td width="100%">
+          <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#EXTRA_BARCODE2_TYPES">EXTRA_BARCODE2_TYPES</a></code>
+          <p>A string array extra for specifying barcode types to scan for.
           
     
 </p>
@@ -597,7 +624,7 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
         <td><code>String</code></td>
         <td width="100%">
           <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#EXTRA_ENABLE_PREVIEW">EXTRA_ENABLE_PREVIEW</a></code>
-          <p>A boolean extra for controlling the preview window.
+          <p><p>A boolean extra for controlling the preview window.
           
     
 </p>
@@ -608,80 +635,8 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
     <tr  >
         <td><code>String</code></td>
         <td width="100%">
-          <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#EXTRA_LICENSE_KEY">EXTRA_LICENSE_KEY</a></code>
-          <p><em>
-      This constant is deprecated.
-    As of Scanner 2
-</em>
-          
-    
-</p>
-        </td>
-    </tr>
-    
-    
-    <tr  >
-        <td><code>String</code></td>
-        <td width="100%">
-          <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#EXTRA_SCANNING_RECT">EXTRA_SCANNING_RECT</a></code>
-          <p><em>
-      This constant is deprecated.
-    As of Scanner 2
-</em>
-          
-    
-</p>
-        </td>
-    </tr>
-    
-    
-    <tr  >
-        <td><code>String</code></td>
-        <td width="100%">
-          <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#RESULT_EXTRA_BARCODE_TEXT">RESULT_EXTRA_BARCODE_TEXT</a></code>
-          <p>A string result extra containing the contents of the barcode.
-          
-    
-</p>
-        </td>
-    </tr>
-    
-    
-    <tr  >
-        <td><code>String</code></td>
-        <td width="100%">
-          <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#RESULT_EXTRA_BARCODE_TYPE">RESULT_EXTRA_BARCODE_TYPE</a></code>
-          <p><em>
-      This constant is deprecated.
-    As of Scanner 2
-</em>
-          
-    
-</p>
-        </td>
-    </tr>
-    
-    
-    <tr  >
-        <td><code>String</code></td>
-        <td width="100%">
-          <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#RESULT_EXTRA_BARCODE_TYPE2">RESULT_EXTRA_BARCODE_TYPE2</a></code>
-          <p>A string result extra containing the type of barcode scanned.
-          
-    
-</p>
-        </td>
-    </tr>
-    
-    
-    <tr  >
-        <td><code>String</code></td>
-        <td width="100%">
-          <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#RESULT_EXTRA_SCAN_RESULT">RESULT_EXTRA_SCAN_RESULT</a></code>
-          <p><em>
-      This constant is deprecated.
-    As of Scanner 2
-</em>
+          <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#EXTRA_UI_PROMPT_TEXT">EXTRA_UI_PROMPT_TEXT</a></code>
+          <p>A string extra containing the requested UI text prompt.
           
     
 </p>
@@ -694,20 +649,6 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
         <td width="100%">
           <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#RESULT_EXTRA_SCAN_RESULT2">RESULT_EXTRA_SCAN_RESULT2</a></code>
           <p>A parcelable result extra containing the <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult2.html">ScanResult2</a></code> object.
-          
-    
-</p>
-        </td>
-    </tr>
-    
-    
-    <tr  >
-        <td><code>String</code></td>
-        <td width="100%">
-          <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html#RESULT_RECEIVER">RESULT_RECEIVER</a></code>
-          <p>Optional Your class derived from ResultReceiver,Passed in on the intent,
- Will receive the result of the scan in addition to the result being passed back
- as result.
           
     
 </p>
@@ -769,13 +710,68 @@ public static final String ACTION</pre>
     
   <p>Action used to launch the barcode scanner via an intent. If scanning is successful, RESULT_OK
  will be returned along with an Intent of result extras. Otherwise, RESULT_CANCELLED will be
- returned.
-</p></p>
+ returned.</p></p>
 
     
       <p>Constant Value:
       
           "com.vuzix.action.SCAN_BARCODE"
+      
+    
+</div>
+
+<div  >
+    <h3 class="api-name" id="EXTRA_BARCODE2_HANDLE_BARCODE">EXTRA_BARCODE2_HANDLE_BARCODE</h3>
+    <div class="api-level">
+      
+  
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+public static final String EXTRA_BARCODE2_HANDLE_BARCODE</pre>
+    
+    
+
+    
+  <p>A Boolean extra to specify barcode app should handle the barcode for you. No data is passed back
+ to the caller. For example:
+
+<pre>intent.putExtra(ScannerIntent.EXTRA_BARCODE2_HANDLE_BARCODE, true);</pre></p></p>
+
+    
+      <p>Constant Value:
+      
+          "barcode2_handle_barcode_internally"
+      
+    
+</div>
+
+<div  >
+    <h3 class="api-name" id="EXTRA_BARCODE2_STAY_OPEN_AFTER_HANDLING">EXTRA_BARCODE2_STAY_OPEN_AFTER_HANDLING</h3>
+    <div class="api-level">
+      
+  
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+public static final String EXTRA_BARCODE2_STAY_OPEN_AFTER_HANDLING</pre>
+    
+    
+
+    
+  <p>A Boolean extra to specify barcode app should expect multiple scans to handle internally. Must be
+ used with EXTRA_BARCODE2_HANDLE_BARCODE and the app won't close after processing.
+
+<pre>intent.putExtra(ScannerIntent.EXTRA_BARCODE2_STAY_OPEN_AFTER_HANDLING, true);</pre></p></p>
+
+    
+      <p>Constant Value:
+      
+          "barcode2_handle_barcode_stay_open"
       
     
 </div>
@@ -798,46 +794,12 @@ public static final String EXTRA_BARCODE2_TYPES</pre>
   <p>A string array extra for specifying barcode types to scan for. Each string should be the
  name() of a BarcodeType. For example:
 
-<pre>intent.putExtra(ScannerIntent.EXTRA_BARCODE_TYPES, new String[] {BarcodeType2.name()});</pre>
-</p></p>
+ <pre>intent.putExtra(ScannerIntent.EXTRA_BARCODE2_TYPES, new String[] {BarcodeType2.name()});</pre></p></p>
 
     
       <p>Constant Value:
       
           "barcode2_types"
-      
-    
-</div>
-
-<div  >
-    <h3 class="api-name" id="EXTRA_BARCODE_TYPES">EXTRA_BARCODE_TYPES</h3>
-    <div class="api-level">
-      
-  
-      
-  
-
-    </div>
-<pre class="api-signature no-pretty-print">
-public static final String EXTRA_BARCODE_TYPES</pre>
-    
-    
-
-    <p>
-  <p class="caution"><strong>
-      This constant is deprecated.</strong><br/>
-    As of Scanner 2
-
-  </p>
-  <p>A string array extra for specifying barcode types to scan for. Each string should be the
- name() of a BarcodeType. For example:
-
-  <pre>intent.putExtra(ScannerIntent.EXTRA_BARCODE_TYPES, new String[] {BarcodeType.QR.name(), BarcodeType.QR_MICRO.name()});</pre></p></p>
-
-    
-      <p>Constant Value:
-      
-          "barcode_types"
       
     
 </div>
@@ -885,12 +847,12 @@ public static final String EXTRA_ENABLE_PREVIEW</pre>
     
 
     
-  <p>A boolean extra for controlling the preview window.
+  <p><p>A boolean extra for controlling the preview window.</p>
 
- Note, thisis only read by products with see-through displays implementing SDK engine 1.71 or
- higher. Other platforms ignore this extra.
+ <p>Note, this is only read by products with see-through displays implementing SDK engine 1.71 or
+ higher. Other platforms ignore this extra.</p>
 
- The preview will be on while scanning unless this extra is present and set false.</p></p>
+ <p>The preview will be on while scanning unless this extra is present and set false.</p></p></p>
 
     
       <p>Constant Value:
@@ -901,7 +863,7 @@ public static final String EXTRA_ENABLE_PREVIEW</pre>
 </div>
 
 <div  >
-    <h3 class="api-name" id="EXTRA_LICENSE_KEY">EXTRA_LICENSE_KEY</h3>
+    <h3 class="api-name" id="EXTRA_UI_PROMPT_TEXT">EXTRA_UI_PROMPT_TEXT</h3>
     <div class="api-level">
       
   
@@ -910,166 +872,17 @@ public static final String EXTRA_ENABLE_PREVIEW</pre>
 
     </div>
 <pre class="api-signature no-pretty-print">
-public static final String EXTRA_LICENSE_KEY</pre>
+public static final String EXTRA_UI_PROMPT_TEXT</pre>
     
     
 
-    <p>
-  <p class="caution"><strong>
-      This constant is deprecated.</strong><br/>
-    As of Scanner 2
-
-  </p>
-  <p>A string extra for specifying a custom license key. Only valid on M300 and M300XL.</p></p>
+    
+  <p>A string extra containing the requested UI text prompt.</p></p>
 
     
       <p>Constant Value:
       
-          "license_key"
-      
-    
-</div>
-
-<div  >
-    <h3 class="api-name" id="EXTRA_SCANNING_RECT">EXTRA_SCANNING_RECT</h3>
-    <div class="api-level">
-      
-  
-      
-  
-
-    </div>
-<pre class="api-signature no-pretty-print">
-public static final String EXTRA_SCANNING_RECT</pre>
-    
-    
-
-    <p>
-  <p class="caution"><strong>
-      This constant is deprecated.</strong><br/>
-    As of Scanner 2
-
-  </p>
-  <p>A parcelable extra for specifying the scanning rect. For example:
-
- <pre>intent.putExtra(ScannerIntent.EXTRA_SCANNING_RECT, new ScanningRect(.5f, .5f));</pre></p></p>
-
-    
-      <p>Constant Value:
-      
-          "scanning_rect"
-      
-    
-</div>
-
-<div  >
-    <h3 class="api-name" id="RESULT_EXTRA_BARCODE_TEXT">RESULT_EXTRA_BARCODE_TEXT</h3>
-    <div class="api-level">
-      
-  
-      
-  
-
-    </div>
-<pre class="api-signature no-pretty-print">
-public static final String RESULT_EXTRA_BARCODE_TEXT</pre>
-    
-    
-
-    
-  <p>A string result extra containing the contents of the barcode.
-</p></p>
-
-    
-      <p>Constant Value:
-      
-          "text"
-      
-    
-</div>
-
-<div  >
-    <h3 class="api-name" id="RESULT_EXTRA_BARCODE_TYPE">RESULT_EXTRA_BARCODE_TYPE</h3>
-    <div class="api-level">
-      
-  
-      
-  
-
-    </div>
-<pre class="api-signature no-pretty-print">
-public static final String RESULT_EXTRA_BARCODE_TYPE</pre>
-    
-    
-
-    <p>
-  <p class="caution"><strong>
-      This constant is deprecated.</strong><br/>
-    As of Scanner 2
-
-  </p>
-  <p>A string result extra containing the type of barcode scanned.</p></p>
-
-    
-      <p>Constant Value:
-      
-          "type"
-      
-    
-</div>
-
-<div  >
-    <h3 class="api-name" id="RESULT_EXTRA_BARCODE_TYPE2">RESULT_EXTRA_BARCODE_TYPE2</h3>
-    <div class="api-level">
-      
-  
-      
-  
-
-    </div>
-<pre class="api-signature no-pretty-print">
-public static final String RESULT_EXTRA_BARCODE_TYPE2</pre>
-    
-    
-
-    
-  <p>A string result extra containing the type of barcode scanned.
-</p></p>
-
-    
-      <p>Constant Value:
-      
-          "type2"
-      
-    
-</div>
-
-<div  >
-    <h3 class="api-name" id="RESULT_EXTRA_SCAN_RESULT">RESULT_EXTRA_SCAN_RESULT</h3>
-    <div class="api-level">
-      
-  
-      
-  
-
-    </div>
-<pre class="api-signature no-pretty-print">
-public static final String RESULT_EXTRA_SCAN_RESULT</pre>
-    
-    
-
-    <p>
-  <p class="caution"><strong>
-      This constant is deprecated.</strong><br/>
-    As of Scanner 2
-
-  </p>
-  <p>A parcelable result extra containing the <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult.html">ScanResult</a></code> object.</p></p>
-
-    
-      <p>Constant Value:
-      
-          "result"
+          "prompt"
       
     
 </div>
@@ -1089,41 +902,12 @@ public static final String RESULT_EXTRA_SCAN_RESULT2</pre>
     
 
     
-  <p>A parcelable result extra containing the <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult2.html">ScanResult2</a></code> object.
-</p></p>
+  <p>A parcelable result extra containing the <code><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult2.html">ScanResult2</a></code> object.</p></p>
 
     
       <p>Constant Value:
       
           "result2"
-      
-    
-</div>
-
-<div  >
-    <h3 class="api-name" id="RESULT_RECEIVER">RESULT_RECEIVER</h3>
-    <div class="api-level">
-      
-  
-      
-  
-
-    </div>
-<pre class="api-signature no-pretty-print">
-public static final String RESULT_RECEIVER</pre>
-    
-    
-
-    
-  <p>Optional Your class derived from ResultReceiver,Passed in on the intent,
- Will receive the result of the scan in addition to the result being passed back
- as result. This is useful when not being called from an activity.
-</p></p>
-
-    
-      <p>Constant Value:
-      
-          "result_receiver"
       
     
 </div>

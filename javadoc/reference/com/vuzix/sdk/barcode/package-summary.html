@@ -217,31 +217,18 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
         <ul data-reference-resources>
           
           
-    <li><h2 class="hide-from-toc">Interfaces</h2>
-      <ul>
-        <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2.html">Scanner2</a></li>
-        <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.Listener.html">ScannerFragment.Listener</a></li>
-        <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.Listener2.html">ScannerFragment.Listener2</a></li>
-      </ul>
-    </li>
           
     <li><h2 class="hide-from-toc">Classes</h2>
       <ul>
-        <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Location.html">Location</a></li>
-        <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner.html">Scanner</a></li>
-        <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2Constants.html">Scanner2Constants</a></li>
-        <li><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2Factory.html">Scanner2Factory</a></li>
-        <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.html">ScannerFragment</a></li>
         <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html">ScannerIntent</a></li>
-        <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanningRect.html">ScanningRect</a></li>
-        <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult.html">ScanResult</a></li>
+        <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.html">ScannerIntent.Request</a></li>
+        <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.Options.html">ScannerIntent.Request.Options</a></li>
         <li><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult2.html">ScanResult2</a></li>
       </ul>
     </li>
           
     <li><h2 class="hide-from-toc">Enums</h2>
       <ul>
-        <li><a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType.html">BarcodeType</a></li>
         <li><a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType2.html">BarcodeType2</a></li>
       </ul>
     </li>
@@ -436,7 +423,21 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 <h1>com.vuzix.sdk.barcode</h1>
 
 
-  Classes for using the barcode scanner in the M400
+  <p>Provides an intent-based interface to implement a barcode scanner in the Vuzix M300, M400,
+ Blade, Blade2, Shield, and LX1.</p>
+
+ <p>Using the version 2.x SDK, a client sends a simple intent to the system, and will receive an
+ ActivityResult with the contents of the scan. This provides a very simple mechanism to allow
+ developers to easily scan a barcode with minimal overhead.</p>
+
+ <p>The version 1.x SDK had two additional modes of scanning operation. Version 1.x could embed a
+ scanner fragment in the client UI, and it could inentify barcodes within image data supplied by
+ the client. Those two modes of operation are not supported by nerwer Vuzix products. If those
+ modes are required, version 1.72 of the SDK should be used and the software should only be run on
+ M300, M400, Blade, Blade2, or Shield.</p>
+
+ <p> The version 2.x SDK is backward compatible the same Vuzix products supported by the version
+ 1.x SDK plus is is supported by the the Vuzix LX1.</p>
 
 
 
@@ -444,47 +445,6 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 
   
 
-
-  
-    <h2>Interfaces</h2>
-    
-  
-  <table class="jd-sumtable-expando">
-    
-      <tr  >
-        <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2.html">Scanner2</a></td>
-        <td class="jd-descrcol" width="100%">
-          &nbsp;
-          
-    
-
-        </td>
-      </tr>
-      
-    
-      <tr  >
-        <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.Listener.html">ScannerFragment.Listener</a></td>
-        <td class="jd-descrcol" width="100%">
-          Interface for those who want to be notified when a barcode is identified.&nbsp;
-          
-    
-
-        </td>
-      </tr>
-      
-    
-      <tr  >
-        <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.Listener2.html">ScannerFragment.Listener2</a></td>
-        <td class="jd-descrcol" width="100%">
-          &nbsp;
-          
-    
-
-        </td>
-      </tr>
-      
-    
-  </table>
 
   
 
@@ -496,71 +456,10 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
   <table class="jd-sumtable-expando">
     
       <tr  >
-        <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/Location.html">Location</a></td>
-        <td class="jd-descrcol" width="100%">
-          <em>
-      This class is deprecated.
-    As of Scanner 2
-</em>&nbsp;
-          
-    
-
-        </td>
-      </tr>
-      
-    
-      <tr  >
-        <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner.html">Scanner</a></td>
-        <td class="jd-descrcol" width="100%">
-          <em>
-      This class is deprecated.
-    As of Scanner 2
-</em>&nbsp;
-          
-    
-
-        </td>
-      </tr>
-      
-    
-      <tr  >
-        <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2Constants.html">Scanner2Constants</a></td>
-        <td class="jd-descrcol" width="100%">
-          Represents Constants and Parameters used in the bundle to the scanner engine
-&nbsp;
-          
-    
-
-        </td>
-      </tr>
-      
-    
-      <tr  >
-        <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/Scanner2Factory.html">Scanner2Factory</a></td>
-        <td class="jd-descrcol" width="100%">
-          &nbsp;
-          
-    
-
-        </td>
-      </tr>
-      
-    
-      <tr  >
-        <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerFragment.html">ScannerFragment</a></td>
-        <td class="jd-descrcol" width="100%">
-          ScannerFragment is an easy way to add barcode scanning functionality to your app.&nbsp;
-          
-    
-
-        </td>
-      </tr>
-      
-    
-      <tr  >
         <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.html">ScannerIntent</a></td>
         <td class="jd-descrcol" width="100%">
-          ScannerIntent contains constants useful for performing barcode scanning via an intent.&nbsp;
+          <p>Defines the constants required for performing barcode scanning via an intent, and
+ defines some classes and methods to simplify the scanning request process.&nbsp;
           
     
 
@@ -569,9 +468,9 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
       
     
       <tr  >
-        <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanningRect.html">ScanningRect</a></td>
+        <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.html">ScannerIntent.Request</a></td>
         <td class="jd-descrcol" width="100%">
-          Represents the center portion of an image that will be scanned for barcodes.&nbsp;
+          <p>Creates an Intent used to make a request to the embedded Vuzix engine.&nbsp;
           
     
 
@@ -580,12 +479,9 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
       
     
       <tr  >
-        <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/ScanResult.html">ScanResult</a></td>
+        <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/ScannerIntent.Request.Options.html">ScannerIntent.Request.Options</a></td>
         <td class="jd-descrcol" width="100%">
-          <em>
-      This class is deprecated.
-    As of Scanner 2
-</em>&nbsp;
+          Options that can customize the behavior of the scanner&nbsp;
           
     
 
@@ -614,20 +510,6 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
     
   
   <table class="jd-sumtable-expando">
-    
-      <tr  >
-        <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType.html">BarcodeType</a></td>
-        <td class="jd-descrcol" width="100%">
-          <em>
-      This enum is deprecated.
-    As of Scanner 2
-</em>&nbsp;
-          
-    
-
-        </td>
-      </tr>
-      
     
       <tr  >
         <td class="jd-linkcol"><a href="../../../../../reference/com/vuzix/sdk/barcode/BarcodeType2.html">BarcodeType2</a></td>
